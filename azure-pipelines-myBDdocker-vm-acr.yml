@@ -16,7 +16,7 @@ stages:
       - deployment: DeployToVM
         displayName: 'Deploy MySQL to VM'
         environment:
-          name: 'SandboxHost-638751558452399524'  # Nombre del entorno configurado en Azure DevOps
+          name: 'maquinaS8'  # Nombre del entorno configurado en Azure DevOps
           resourceType: VirtualMachine  # Especifica que se conecta a una máquina virtual
         strategy:
           runOnce:
