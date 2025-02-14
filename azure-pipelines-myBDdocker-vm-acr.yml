@@ -4,7 +4,7 @@ trigger:
       - main
 
 variables:
-  VM_IP_PUBLICA: '172.206.63.73'  # Se debe colocar la IP pública de tu máquina virtual
+  VM_IP_PUBLICA: '20.109.8.113'  # Se debe colocar la IP pública de tu máquina virtual
   IMAGE_NAME: 'mybdmysql'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
   ACR_NAME: 'RegistroContenedorS8'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
   ACR_USERNAME: 'RegistroContenedorS8'  # Se debe colocar el Nombre de usuario del ACR
@@ -16,7 +16,7 @@ stages:
       - deployment: DeployToVM
         displayName: 'Deploy MySQL to VM'
         environment:
-          name: 's8machine'  # Nombre del entorno configurado en Azure DevOps
+          name: 'maquinaS8'  # Nombre del entorno configurado en Azure DevOps
           resourceType: VirtualMachine  # Especifica que se conecta a una máquina virtual
         strategy:
           runOnce:
