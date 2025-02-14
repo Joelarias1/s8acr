@@ -4,11 +4,11 @@ trigger:
       - main
 
 variables:
-  VM_IP_PUBLICA: '52.232.193.173'  # Se debe colocar la IP pública de tu máquina virtual
+  VM_IP_PUBLICA: '172.206.63.73'  # Se debe colocar la IP pública de tu máquina virtual
   IMAGE_NAME: 'mybdmysql'  # Se debe colocar el Nombre de la imagen que será descargada desde ACR
-  ACR_NAME: 'mybdmysql'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
-  ACR_USERNAME: 'mybdmysql'  # Se debe colocar el Nombre de usuario del ACR
-  ACR_PASSWORD: '2JmH5lwFGKFaiHeIvhQhmv15Ln0nh6FiLTYj1vyiOk+ACRAY88Wx'  # Se debe colocar la Contraseña del ACR
+  ACR_NAME: 'RegistroContenedorS8'  # Se debe colocar el Nombre de tu Azure Container Registry (ACR)
+  ACR_USERNAME: 'RegistroContenedorS8'  # Se debe colocar el Nombre de usuario del ACR
+  ACR_PASSWORD: 'S1syz/4JNhuh/NS1Wadrc1M2O+2gHEFTMsWkKLiGUJ+ACRAtylgb+ACRAY88Wx'  # Se debe colocar la Contraseña del ACR
 
 stages:
   - stage: Deploy
@@ -16,7 +16,7 @@ stages:
       - deployment: DeployToVM
         displayName: 'Deploy MySQL to VM'
         environment:
-          name: 'VMLinuxDocker'  # Nombre del entorno configurado en Azure DevOps
+          name: 'VMS8'  # Nombre del entorno configurado en Azure DevOps
           resourceType: VirtualMachine  # Especifica que se conecta a una máquina virtual
         strategy:
           runOnce:
